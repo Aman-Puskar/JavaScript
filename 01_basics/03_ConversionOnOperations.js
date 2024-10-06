@@ -28,5 +28,21 @@ let isLoggedIn = "";
 let num = 77;
 
 let numString = String(num);
-console.log(numString);
-console.log(typeof numString);
+// console.log(numString);
+// console.log(typeof numString);
+
+// ********************************* Operations ****************************//
+//basic math operations. (+, -, * , /, %)
+let str1 = "Aman";
+let str2 = " Puskar";
+// console.log(str1 + str2);
+
+// console.log("1" + 2);
+// console.log(1 + "2");
+// console.log("1" + 2 + 2);    //if string is first then all will be in string
+// console.log(1 + 2 + "3");      // other wise first will be done and then done accordingly.
+
+
+console.log(+true);
+console.log(+"");
+
