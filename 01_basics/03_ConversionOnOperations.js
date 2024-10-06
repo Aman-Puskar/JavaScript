@@ -18,9 +18,15 @@ null => 0
 */
 
 let isLoggedIn = "";
-let booleanisLoggedIn = Boolean(isLoggedIn);
-console.log(booleanisLoggedIn);
+// let booleanisLoggedIn = Boolean(isLoggedIn);
+// console.log(booleanisLoggedIn);
 
 //1 => true;  0 => false
 //"" => false;
 //"aman" => true
+
+let num = 77;
+
+let numString = String(num);
+console.log(numString);
+console.log(typeof numString);
