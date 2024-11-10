@@ -21,11 +21,11 @@
 
 // slice and splice;
 console.log("A" , arr);
-const ar1 = arr.slice(0,4);
+const ar1 = arr.slice(0,4); //gives the portion of the array (start , end (which is not included)) but the original array remains same;
 console.log(ar1);
 console.log("B" , arr);
 
-const ar2 = arr.splice(0,4);
+const ar2 = arr.splice(0,4);//gives the portion of the array but actually removes that portion from the original array and the original array is modified;
 console.log(ar2);
 console.log("C" , arr);
 
