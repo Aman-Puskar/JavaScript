@@ -7,7 +7,7 @@ const balance = new Number(400);
 
 const otherNumber = 4348.847747;
 
-// console.log(otherNumber.toPrecision(5)); //return the value to precised digits first give the privority to the digits before the decimal.(round off to the precised value;)
+// console.log(otherNumber.toPrecision(5)); //return the value to precised digits first give the priority to the digits before the decimal.(round off to the precised value;)
 
 const hundred = 10000000;
 // console.log(hundred.toLocaleString('en-IN')); //return the values with the commas so the value can be readed easily and initially it add commas as per the US currency.
