@@ -16,3 +16,11 @@ const {faculty : f} = course; //faculty will be treated as f ;
 // console.log(faculty);
 console.log(f);
 
+//api and json
+
+// {
+//     "name" : "Rohan",
+//     "class" : 5,
+//     "school" : "abc"
+// };
+
