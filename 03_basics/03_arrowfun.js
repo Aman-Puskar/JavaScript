@@ -41,11 +41,22 @@ const addTow = (n1, n2) => {
 
 //different syntax;
 const add = (n1, n2) => n1 + n2;
-console.log(add(23,32));
+// console.log(add(23,32));
 
 
 //note-> when we use {} we have to mention the return statement and if we use (), then no need to write the return statement;
 
 //if we have to return the object,it must be wrap in ();
 const obj = () => ({userName : "Aman Puskar"});
-console.log(obj());
+// console.log(obj());
+
+// immedialtly invoked function expression (IIFE)
+//wrap the function in the () then use  () ,and also help to reduce the globle scope pollution
+
+(function invoked() {
+    console.log(`invoked function`);
+    
+})();  //use semicollen when use two IIFE,to indicate the termination point of particular IIFE;
+
+
+ ((surname) => (console.log(`hi my name is Aman ${surname}`)))("Puskar");
