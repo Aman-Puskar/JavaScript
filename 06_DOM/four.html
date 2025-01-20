@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit and Remove DOM Element</title>
+</head>
+<body style="background-color:black; color : white">
+    <ul class="language">
+        <li>JAVA</li>
+    </ul>
+</body>
+<script>
+    const l = document.createElement('li');
+    l.innerText = "Python";
+    const lang = document.querySelector(".language");
+    lang.appendChild(l);
+    // document.body.appendChild(l);  -->this will add the list item in the body not in the language container
+
+    //created a function to add new list item instead of writing again and again to add new list in the ordered list;
+    function generateListItem(addList) {
+        const li = document.createElement('li');
+        // const text = document.createTextNode(`${addList}`);
+        // li.append(text);
+        li.append(document.createTextNode(`${addList}`))
+        // const lang = document.querySelector(".language");
+        // lang.appendChild(li);
+
+        document.querySelector(".language").appendChild(li);
+    }
+    generateListItem("javaScript");
+    generateListItem("PHP");
+    generateListItem("C++");
+
+    //edit the content;
+    const firstLang = document.querySelector("li:first-child");
+    firstLang.outerHTML = "<li>nodeJS</li>";
+
+    //remove the element;
+    const lastLang = document.querySelector("li:last-child");
+    lastLang.remove();
+</script>
+</html>
