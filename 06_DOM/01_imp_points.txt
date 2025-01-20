@@ -1,0 +1,9 @@
+document.getElementById('').id/className/getAttribute();
+getAttribute('id')  -->give value of the id
+setAttribute('id', 'id_name');  -->this overrides, so try to prevent it and to do so u can pass previous first and then new one,
+
+innerText, innerHTML, textContent
+getElementByClassName -- > html collections ---> to array by (Array.from())
+---> then manipulate accordingly;
+
+ 
