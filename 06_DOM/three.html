@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        Body {
+            background-color : black;
+            color : white;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>DOM</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //creating div element
+    const div = document.createElement('div');
+    // console.log(div);
+    //addding class name to the div
+    div.className = 'main-div';
+    //adding id
+    div.id = "under-main";
+    //(id and class are some default given methods which are regular to use)
+
+    //if we need to add custom attributes
+    div.setAttribute("title" , "new-title");
+    div.style.backgroundColor = "red";
+    // div.innerText = "This is new Div";
+
+    //we can use different approach to add text 
+
+    //1. create text node
+    //2. append to the div
+   const newTextNode =  document.createTextNode("This is newly created text node");
+    div.append(newTextNode);
+
+    //now we have created the div but it was not visible , to do so we will attach to the body so that it can be visible to the user. 
+    document.body.appendChild(div);
+
+
+    //trying with own example
+   const newDiv =  document.createElement('div');
+//    newDiv.className = "new-div";
+//    newDiv.id = "new-id";
+    newDiv.setAttribute("className" , "new-class");
+    newDiv.setAttribute("id", "new-id");
+    newDiv.style.backgroundColor = "yellow";
+    newDiv.style.color = "black";
+    newDiv.style.marginTop = "5px";
+    const text = document.createTextNode("This is the new div for the practice example");
+    newDiv.append(text);
+    document.body.appendChild(newDiv);
+</script>
+</html>
