@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+</body>
+<script>
+    // document.getElementById("owl").onclick = function() {
+    //     alert("This is owl");
+    // }
+
+    //use different approach;       //attachEvent()  -->used earlier; 
+    document.getElementById("owl").addEventListener('click' , function(e)  {
+        // alert("this is owl again");
+        // console.log(e)
+        //event types
+        /*
+        type, timestamp, defaultprevented,
+        target,toelement,srcelement,currentTarget,
+         clientX, clientY, screenX, screenY, ctrlkey, 
+         shiftKey, keyCode 
+        */
+    }, false)  //there is by default false that is why we ignore writing it
+
+    //event propogation --> false (bubble) and true (capture);
+    /*
+    false --> when we handle a event inside a event then it propogates as a bubble like inner one first then outer and outer just like formation of bubble
+    true --> it will go from top to bottom like when event is handdle inside a event then first outer event is called then inner one.
+    note --> to stop seperate this propogation we can use e.stopPropogation(); in the inner or the outer event handler so that it will not propogate either 
+    from bottom to top or top to bottom   ---> it will seperate the events 
+    */
+
+   //preventDefault
+//    document.getElementById('google').addEventListener('click', function(e){
+//     e.preventDefault();
+//     e.stopPropagation();
+//     console.log("google is clicked");
+    
+//    }, false)
+
+
+
+//a simlpe task   (remove the image when click )
+document.querySelector("#images").addEventListener('click', function(e){
+    // console.log(e.target.parentNode);
+    if(e.target.tagName === 'IMG') {
+    e.target.parentNode.remove();
+    }
+}, false);
+</script>
+</html>
