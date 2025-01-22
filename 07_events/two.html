@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+<body>
+    <h1>This is Promise</h1>
+    <button id="stop-button">Stop Button</button>
+</body>
+<script>
+    const name = function() {
+        console.log("i am computer system");
+    }
+
+    //chaging the text of the heading of the website
+    const newHeading = function() {
+    document.querySelector("h1").innerHTML = "This is changed text";
+    }
+    //give refrence of the function and do not execute the function when given to handler
+    // setTimeout(newHeading, 2000);
+
+    //now we will stop the setTimeOut by clearTimeOut
+
+    const stopTimeOut =  setTimeout(newHeading, 2000);
+
+    document.getElementById('stop-button').addEventListener('click', ()=> {
+        //here pass the refrence of the setTimeOut, to do so hold it in a variable.
+        clearTimeout(stopTimeOut)
+        console.log("Stopped the time out");
+        
+    })
+</script>
+</html>

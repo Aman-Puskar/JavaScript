@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Promise</title>
+</head>
+<body>
+    <h1>This is new Promise website</h1>
+    <button id="start-button">Start Button</button>
+
+    <button id="stop-button">Stop Button</button>
+</body>
+<script>
+    const myFun = (message) =>{
+        console.log(`${message}`, Date.now().toLocaleString());
+        
+    }
+//    const start = setInterval(myFun, 2000, "Aman")
+  document.getElementById("start-button").addEventListener('click', ()=>{
+     const stopInterval = setInterval(myFun, 2000, "Aman");
+    stopEvent(stopInterval);
+
+  })
+
+  function stopEvent(stopInterval) {
+  document.getElementById('stop-button').addEventListener('click', ()=>{
+    clearInterval(stopInterval);
+  })
+}
+</script>
+</html>
