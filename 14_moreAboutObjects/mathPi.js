@@ -27,6 +27,7 @@ User.name = "Amit";
 
 
 //trying to loop on the objects
+//forOf loop for objects
 
 for (let [key , value] of Object.entries(User)) {
     if(typeof value !== 'function') {
