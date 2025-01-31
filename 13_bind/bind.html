@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>react</title>
+</head>
+<body>
+    <button>click me</button>
+</body>
+<script>
+    class React {
+        constructor() {
+            this.library = "REACT";
+            this.server = "https://localhost:8080/app";
+            document
+            .querySelector('button')
+            .addEventListener('click', this.handler.bind(this));
+            //we need to bind and pass our this to handler to access the variables 
+        }
+        handler() {
+            console.log('button clicked!'); 
+            console.log(this.library);
+            
+        }
+    }
+    const app = new React();
+</script>
+</html>
