@@ -1,0 +1,71 @@
+
+ <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body style="background-color: black;">
+    <button id="apple">Apple</button>
+    <button id="banana">Banana</button>
+  </body>
+  <script>
+    //closure is when inner function have access to outer scope function
+
+    //lexical scoping;
+    // function outer() {
+    //     let username = "Aman";
+    //     function inner() {
+    //         console.log("inner: ", username);
+    //     }
+    //     inner();
+    //     function innerTwo() {
+    //       console.log("inner two:", username);
+    //     }
+    //     innerTwo();
+
+    // }
+    // outer();
+    // console.log("outer: ",username);
+
+
+    // //closure 
+    // function makefun() {
+    //   const name = "Aman Puskar";
+    //   function displayName() {
+    //     console.log("display name:", name);
+    //   }
+    //   return displayName; //it will return all the lexical scopes that is  all properties and function
+    // }
+    // const fun = makefun();
+    // fun();
+  </script>
+
+  <script>
+
+//real world senario
+
+
+//  document.getElementById('apple').addEventListener('click', (e) => {
+//   document.body.style.backgroundColor = "red";
+//  })
+
+//  document.getElementById('banana').addEventListener('click', (e) => {
+//   document.body.style.backgroundColor = "yellow";
+//  })
+
+
+
+//closure and lexical 
+ function clickHandler(color) {
+  return function(){
+  document.body.style.backgroundColor = `${color}`;
+  }
+ }
+//  document.getElementById('apple').addEventListener('click', function(){
+//   clickHandler('red');
+//  })
+document.getElementById('apple').onclick = clickHandler('red');
+  </script>
+  </html>
